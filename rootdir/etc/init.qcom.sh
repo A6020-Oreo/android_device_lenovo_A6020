@@ -59,7 +59,7 @@ echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 
 start_sensors
 start_copying_prebuilt_qcril_db
-start_msm_irqbalance_8939
+#start_msm_irqbalance_8939
 
 bootmode=`getprop ro.bootmode`
 emmc_boot=`getprop ro.boot.emmc`
