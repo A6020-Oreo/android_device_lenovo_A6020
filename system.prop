@@ -39,6 +39,7 @@ ro.bluetooth.sap=true
 ro.qualcomm.bt.hci_transport=smd
 
 # Boot
+ro.build.shutdown_timeout=0
 sys.vendor.shutdown.waittime=500
 
 # Camera
