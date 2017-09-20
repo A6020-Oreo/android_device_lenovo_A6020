@@ -26,7 +26,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-export PATH=/system/bin
+export PATH=/system/vendor/bin
 
 # Set platform variables
 target=`getprop ro.board.platform`
@@ -38,7 +38,7 @@ fi
 
 start_msm_irqbalance_8939()
 {
-	if [ -f /system/bin/msm_irqbalance ]; then
+	if [ -f /system/vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
 		    "239" | "241" | "263" | "264" | "268" | "269" | "270" | "271")
 			start msm_irqbalance;;
@@ -77,7 +77,7 @@ esac
 rm -rf /data/misc/radio/modem_config
 mkdir /data/misc/radio/modem_config
 chmod 770 /data/misc/radio/modem_config
-cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config 
+cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
 chown -hR radio.radio /data/misc/radio/modem_config
 echo 1 > /data/misc/radio/copy_complete
 chown radio:radio /data/misc/radio/copy_complete
