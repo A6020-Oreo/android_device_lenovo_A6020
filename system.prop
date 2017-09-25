@@ -2,17 +2,20 @@
 
 # Art
 dalvik.vm.dex2oat-flags=--no-watch-dog
-ro.sys.fw.dex2oat_thread_count=4
+ro.sys.fw.dex2oat_thread_count=2
 
 # Audio
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
+persist.audio.fluence.mode=endfire
+persist.vendor.audio.fluence.mode=endfire
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=false
+ro.ril.enable.amr.wideband=1
 vendor.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
-vendor.audio.tunnel.encode = false
+vendor.audio.tunnel.encode=false
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=true
 vendor.voice.voip.conc.disabled=true
