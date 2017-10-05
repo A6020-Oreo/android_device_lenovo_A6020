@@ -1028,6 +1028,8 @@ QCamera2HardwareInterface::QCamera2HardwareInterface(uint32_t cameraId)
       mRawdataJob(-1),
       mPreviewFrameSkipValid(0),
       mNumPreviewFaces(-1),
+      mLastAFScanTime(0),
+      mLastCaptureTime(0),
       mAdvancedCaptureConfigured(false),
       mFPSReconfigure(false)
 {
