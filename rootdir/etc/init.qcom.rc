@@ -445,7 +445,11 @@ on charger
     chmod 0664 /sys/class/power_supply/bms/voltage_ocv
 
     start vm_bms
-    
+
+on property:init.svc.surfaceflinger=restarting
+    stop hwcomposer-2-1
+    start hwcomposer-2-1
+
 service vm_bms /vendor/bin/vm_bms
     class main
     user root
