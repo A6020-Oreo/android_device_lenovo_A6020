@@ -436,7 +436,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
  
-service rild2-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
+service rild2-wrapper /system/vendor/bin/init.qcom.ril.sh
     class late_start
     user root
     group root
@@ -474,7 +474,7 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service qcom-sh /system/bin/sh /system/etc/init.qcom.sh
+service qcom-sh /system/vendor/bin/init.qcom.sh
     class late_start
     user root
     group root
@@ -484,13 +484,13 @@ service qcom-sh /system/bin/sh /system/etc/init.qcom.sh
 on property:sys.boot_completed=1
     start qcom-sh
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /system/vendor/bin/init.qcom.fm.sh
     class late_start
     user root
     group system
     disabled
     oneshot
 
-service qcom-mem /system/bin/sh /system/etc/init.qcom.mem.sh
+service qcom-mem /system/vendor/bin/init.qcom.mem.sh
     disabled
     oneshot
