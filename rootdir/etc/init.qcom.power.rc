@@ -26,9 +26,6 @@ on enable-low-power
     # Disable thermal core_control to update interactive gov settings
     write /sys/module/msm_thermal/core_control/enabled 0
 
-    # Disable cluster plug to update interactive gov settings
-    echo 0 > /sys/module/cluster_plug/parameters/active
-
     # some files in /sys/devices/system/cpu are created after the restorecon of
     # /sys/. These files receive the default label "sysfs".
     # Restorecon again to give new files the correct label.
@@ -62,10 +59,6 @@ on enable-low-power
 
     # Enable thermal core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
-
-    # Enable cluster plug now and allow the powerhal to control it
-    chown system system /sys/module/cluster_plug/parameters/low_power_mode
-    echo 1 > /sys/module/cluster_plug/parameters/active
 
     # HMP scheduler (big.Little cluster related) settings
     write /proc/sys/kernel/sched_upmigrate 75
