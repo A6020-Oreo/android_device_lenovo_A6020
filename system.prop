@@ -44,7 +44,6 @@ sys.vendor.shutdown.waittime=500
 
 # Camera
 persist.camera.cpp.duplication=false
-debug.camcorder.disablemeta=true
 
 # Charger
 persist.sys.chgdisabled=0
