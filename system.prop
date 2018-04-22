@@ -44,7 +44,6 @@ sys.vendor.shutdown.waittime=500
 
 # Camera
 persist.camera.cpp.duplication=false
-debug.camcorder.disablemeta=true
 
 # Charger
 persist.sys.chgdisabled=0
@@ -69,8 +68,6 @@ mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 mm.enable.qcom_parser=3407871
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 persist.media.treble_omx=false
 
 # Qualcomm
