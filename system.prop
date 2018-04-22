@@ -68,6 +68,24 @@ ro.opengles.version=196609
 # DRM
 drm.service.enabled=1
 
+# Google DNS
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+dhcp.eth0.dns1=8.8.8.8
+dhcp.eth0.dns2=8.8.4.4
+dhcp.wlan0.dns1=8.8.8.8
+dhcp.wlan0.dns2=8.8.4.4
+
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
