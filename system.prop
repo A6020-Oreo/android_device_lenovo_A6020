@@ -49,6 +49,10 @@ debug.camcorder.disablemeta=true
 # Charger
 persist.sys.chgdisabled=0
 
+# Dalvik
+dalvik.vm.checkjni=false
+dalvik.vm.verify-bytecode=false
+
 # Display
 debug.sf.hw=0
 debug.egl.hw=0
