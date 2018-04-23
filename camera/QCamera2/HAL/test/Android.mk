@@ -1,11 +1,11 @@
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES:= \
-    qcamera_test.cpp \
+LOCAL_SRC_FILES := \
+    qcamera_test.cpp
 
-LOCAL_SHARED_LIBRARIES:= \
+LOCAL_SHARED_LIBRARIES := \
     libdl \
     libui \
     libutils \
@@ -18,12 +18,12 @@ LOCAL_SHARED_LIBRARIES:= \
     libskia \
     libstagefright \
     libstagefright_foundation \
-    liblog \
+    liblog
 
 ifneq ($(call is-platform-sdk-version-at-least,18),true)
 
 LOCAL_SHARED_LIBRARIES += \
-    libmedia_native \
+    libmedia_native
 
 LOCAL_CFLAGS += -DUSE_JB_MR1
 
@@ -44,12 +44,11 @@ LOCAL_C_INCLUDES += \
     frameworks/av/include/media/stagefright \
     frameworks/native/include/media/openmax \
 
-LOCAL_MODULE:= camera_test
+LOCAL_MODULE := camera_test
 LOCAL_32_BIT_ONLY := true
-LOCAL_MODULE_TAGS:= tests
+LOCAL_MODULE_TAGS := tests
 
 LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 LOCAL_CFLAGS += -O0
 
 include $(BUILD_EXECUTABLE)
-

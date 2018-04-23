@@ -28,7 +28,7 @@ LOCAL_SRC_FILES := \
 LOCAL_CFLAGS = -Wall -Wextra -Werror
 LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 
-#use media extension
+# Use media extensions
 ifeq ($(TARGET_USES_MEDIA_EXTENSIONS), true)
 LOCAL_CFLAGS += -DUSE_MEDIA_EXTENSIONS
 endif
@@ -72,8 +72,7 @@ LOCAL_CFLAGS += -DUSE_KK_CODE
 endif
 
 LOCAL_C_INCLUDES += \
-        $(TARGET_OUT_HEADERS)/qcom/display
-LOCAL_C_INCLUDES += \
+        $(TARGET_OUT_HEADERS)/qcom/display \
         hardware/qcom/display/libqservice
 
 #ifeq ($(TARGET_USE_VENDOR_CAMERA_EXT),true)
@@ -81,25 +80,48 @@ LOCAL_C_INCLUDES += \
 #else
 LOCAL_C_INCLUDES += hardware/qcom/display/libgralloc
 #endif
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
+LOCAL_C_INCLUDES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
+
 ifeq ($(TARGET_TS_MAKEUP),true)
 LOCAL_CFLAGS += -DTARGET_TS_MAKEUP
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/tsMakeuplib/include
 endif
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl liblog libsensor
-LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libqdMetaData libnativewindow
-LOCAL_SHARED_LIBRARIES += libhidltransport libsensor android.hidl.token@1.0-utils android.hardware.graphics.bufferqueue@1.0
+LOCAL_SHARED_LIBRARIES := \
+    libbinder \
+    libcamera_client \
+    liblog \
+    libhardware \
+    libnativewindow \
+    libutils \
+    libcutils \
+    libdl \
+    liblog \
+    libsensor \
+    libqdMetaData \
+    libqservice
+
+LOCAL_SHARED_LIBRARIES += \
+    libmmcamera_interface \
+    libmmjpeg_interface
+
+# HIDL Dependencies
+LOCAL_SHARED_LIBRARIES += \
+    libhidltransport \
+    android.hidl.token@1.0-utils \
+    android.hardware.graphics.bufferqueue@1.0
+
 LOCAL_STATIC_LIBRARIES := libarect
+
 ifeq ($(TARGET_TS_MAKEUP),true)
 LOCAL_SHARED_LIBRARIES += libts_face_beautify_hal libts_detected_face_hal
 endif
-LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
 
-LOCAL_MODULE_RELATIVE_PATH    := hw
-LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE := camera.msm8916
 LOCAL_32_BIT_ONLY := true
 LOCAL_MODULE_TAGS := optional
 

@@ -1,11 +1,10 @@
-ifeq ($(call is-vendor-board-platform,QCOM),true)
 OLD_LOCAL_PATH := $(LOCAL_PATH)
-LOCAL_PATH:=$(call my-dir)
+LOCAL_PATH :=$(call my-dir)
 
 # Build command line test app: mm-qcamera-app
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= \
+LOCAL_CFLAGS := \
         -DAMSS_VERSION=$(AMSS_VERSION) \
         $(mmcamera_debug_defines) \
         $(mmcamera_debug_cflags) \
@@ -20,7 +19,7 @@ LOCAL_CFLAGS += -D_ANDROID_
 LOCAL_CLANG_CFLAGS += \
         -Wno-error=enum-conversion
 
-LOCAL_SRC_FILES:= \
+LOCAL_SRC_FILES := \
         src/mm_qcamera_main_menu.c \
         src/mm_qcamera_app.c \
         src/mm_qcamera_unit_test.c \
@@ -34,18 +33,21 @@ LOCAL_SRC_FILES:= \
         src/mm_qcamera_commands.c
 #        src/mm_qcamera_dual_test.c \
 
-LOCAL_C_INCLUDES:=$(LOCAL_PATH)/inc
-LOCAL_C_INCLUDES+= \
+LOCAL_C_INCLUDES :=$(LOCAL_PATH)/inc
+LOCAL_C_INCLUDES += \
         frameworks/native/include/media/openmax \
         $(LOCAL_PATH)/../common \
         $(LOCAL_PATH)/../../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../../mm-image-codec/qomx_core
 
-LOCAL_C_INCLUDES+= $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
-LOCAL_C_INCLUDES+= $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_C_INCLUDES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
+
 ifeq ($(call is-board-platform,msm8974),true)
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_HEAP_ID=GRALLOC_USAGE_PRIVATE_IOMMU_HEAP
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_FALLBACK_HEAP_ID=GRALLOC_USAGE_PRIVATE_IOMMU_HEAP
@@ -95,23 +97,25 @@ else
         LOCAL_CFLAGS += -DCAMERA_ION_FALLBACK_HEAP_ID=ION_CAMERA_HEAP_ID
         LOCAL_CFLAGS += -DNUM_RECORDING_BUFFERS=5
 endif
+
 LOCAL_CFLAGS += -Wall -Wextra -Werror
 
-LOCAL_SHARED_LIBRARIES:= \
-         libcutils libdl libmmcamera_interface liblog
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libdl \
+    libmmcamera_interface \
+    liblog
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_MODULE:= mm-qcamera-app
+LOCAL_MODULE := mm-qcamera-app
 LOCAL_32_BIT_ONLY := true
 include $(BUILD_EXECUTABLE)
-endif
 
-ifeq ($(call is-vendor-board-platform,QCOM),true)
 # Build tuning library
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS:= \
+LOCAL_CFLAGS := \
         -DAMSS_VERSION=$(AMSS_VERSION) \
         $(mmcamera_debug_defines) \
         $(mmcamera_debug_cflags) \
@@ -126,7 +130,7 @@ LOCAL_CFLAGS += -D_ANDROID_
 LOCAL_CLANG_CFLAGS += \
         -Wno-error=enum-conversion
 
-LOCAL_SRC_FILES:= \
+LOCAL_SRC_FILES := \
         src/mm_qcamera_main_menu.c \
         src/mm_qcamera_app.c \
         src/mm_qcamera_unit_test.c \
@@ -140,18 +144,21 @@ LOCAL_SRC_FILES:= \
         src/mm_qcamera_commands.c
 #        src/mm_qcamera_dual_test.c \
 
-LOCAL_C_INCLUDES:=$(LOCAL_PATH)/inc
-LOCAL_C_INCLUDES+= \
+LOCAL_C_INCLUDES :=$(LOCAL_PATH)/inc
+LOCAL_C_INCLUDES += \
         frameworks/native/include/media/openmax \
         $(LOCAL_PATH)/../common \
         $(LOCAL_PATH)/../../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../../mm-image-codec/qomx_core
 
-LOCAL_C_INCLUDES+= $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
-LOCAL_C_INCLUDES+= $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_C_INCLUDES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
+
 ifeq ($(call is-board-platform,msm8974),true)
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_HEAP_ID=GRALLOC_USAGE_PRIVATE_IOMMU_HEAP
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_FALLBACK_HEAP_ID=GRALLOC_USAGE_PRIVATE_IOMMU_HEAP
@@ -201,15 +208,18 @@ else
         LOCAL_CFLAGS += -DCAMERA_ION_FALLBACK_HEAP_ID=ION_CAMERA_HEAP_ID
         LOCAL_CFLAGS += -DNUM_RECORDING_BUFFERS=5
 endif
+
 LOCAL_CFLAGS += -Wall -Wextra -Werror
 
-LOCAL_SHARED_LIBRARIES:= \
-         libcutils libdl libmmcamera_interface liblog
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    libdl \
+    libmmcamera_interface \
+    liblog
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_MODULE:= libmm-qcamera
+LOCAL_MODULE := libmm-qcamera
 LOCAL_CLANG := false
 LOCAL_32_BIT_ONLY := true
 include $(BUILD_SHARED_LIBRARY)
-endif
