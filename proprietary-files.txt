@@ -2,7 +2,7 @@
 # Blobs for A6020
 #
 
-# ADSP
+# aDSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
@@ -156,6 +156,55 @@ lib/libmmjpeg_interface.so
 lib/libmpbase.so
 lib/libstlport.so
 lib64/libstlport.so
+vendor/lib/libcamerahandler_jni.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegehw.so
+vendor/lib/libmm-color-convertor.so
+vendor/lib/libmm-disp-apis.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/libmm-qdcm.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
+vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_hdr_lib.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_wavelet_lib.so
+vendor/lib/libmmipl.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmosal.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libmmQSM.so
+vendor/lib/libmmrtpdecoder.so
+vendor/lib/libmmrtpencoder.so
+vendor/lib/liboemcamera.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libts_detected_face_hal.so
+vendor/lib/libts_face_beautify_hal.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libmmrtpdecoder.so
+vendor/lib64/libmmrtpencoder.so
+
+# Camera Actuator
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
@@ -168,7 +217,11 @@ vendor/lib/libactuator_dw9761_ofilm_camera.so
 vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
 vendor/lib/libactuator_rohm_bu64243gwz_camera.so
-vendor/lib/libcamerahandler_jni.so
+vendor/lib64/libactuator_dw9718s.so
+vendor/lib64/libactuator_dw9718s_camcorder.so
+vendor/lib64/libactuator_dw9718s_camera.so
+
+# Camera Chromatix
 vendor/lib/libchromatix_hi545_avc_common.so
 vendor/lib/libchromatix_hi545_avc_default_video.so
 vendor/lib/libchromatix_hi545_avc_hfr_120fps.so
@@ -199,63 +252,14 @@ vendor/lib/libchromatix_ov13850_qtech_hfr_90fps.so
 vendor/lib/libchromatix_ov13850_qtech_preview.so
 vendor/lib/libchromatix_ov13850_qtech_snapshot.so
 vendor/lib/libchromatix_ov13850_snapshot.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libjpegehw.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmm-disp-apis.so
-vendor/lib/libmm-hdcpmgr.so
-vendor/lib/libmm-qdcm.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera2_vpe_module.so
-vendor/lib/libmmcamera2_wnr_module.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_hdr_lib.so
-vendor/lib/libmmcamera_hi545.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_ov13850.so
-vendor/lib/libmmcamera_tintless_algo.so
-vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_wavelet_lib.so
-vendor/lib/libmmcamera_wingtech_hi545_eeprom.so
-vendor/lib/libmmcamera_wingtech_ov13850_eeprom.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmosal.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmQSM.so
-vendor/lib/libmmrtpdecoder.so
-vendor/lib/libmmrtpencoder.so
-vendor/lib/liboemcamera.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libts_detected_face_hal.so
-vendor/lib/libts_face_beautify_hal.so
-vendor/lib64/libactuator_dw9718s.so
-vendor/lib64/libactuator_dw9718s_camcorder.so
-vendor/lib64/libactuator_dw9718s_camera.so
 vendor/lib64/libchromatix_hi545_avc_liveshot.so
 vendor/lib64/libchromatix_hi545_liveshot.so
 vendor/lib64/libchromatix_ov13850_default_video.so
 vendor/lib64/libchromatix_ov13850_qtech_default_video.so
-vendor/lib64/libmmosal.so
-vendor/lib64/libmmrtpdecoder.so
-vendor/lib64/libmmrtpencoder.so
+
+# Camera EEPROM
+vendor/lib/libmmcamera_wingtech_hi545_eeprom.so
+vendor/lib/libmmcamera_wingtech_ov13850_eeprom.so
 
 # Camera Firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
@@ -263,7 +267,11 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 
-# DRM
+# Camera Sensors
+vendor/lib/libmmcamera_hi545.so
+vendor/lib/libmmcamera_ov13850.so
+
+# DRM (SecureMSM)
 bin/qseecomd
 lib/drm/libdrmwvmplugin.so
 lib/libdivxdrmdecrypt.so
@@ -369,7 +377,7 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libmm-qdcm.so
 
-# QMI
+# QMI Framework
 bin/irsc_util
 bin/qmuxd
 bin/vm_bms
