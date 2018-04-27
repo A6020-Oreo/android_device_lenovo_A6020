@@ -8,20 +8,7 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 vendor/lib64/libadsprpc.so
 
-# Adreno
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
+# Adreno (Graphics)
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
@@ -77,6 +64,21 @@ vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libsc-a3xx.so
 vendor/lib64/libscale.so
+
+# Adreno (Graphics) Firmware
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
 
 # Audio
 etc/sound_trigger_mixer_paths.xml
@@ -145,10 +147,6 @@ vendor/lib64/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw
 lib/hw/camera.vendor.msm8916.so
 lib/libarcsoft_beautyshot.so
 lib/libarcsoft_face_detection.so
@@ -259,6 +257,12 @@ vendor/lib64/libmmosal.so
 vendor/lib64/libmmrtpdecoder.so
 vendor/lib64/libmmrtpencoder.so
 
+# Camera Firmware
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw
+
 # DRM
 bin/qseecomd
 lib/drm/libdrmwvmplugin.so
@@ -342,13 +346,6 @@ lib64/hw/keystore.default.so
 lib64/hw/keystore.qcom.so
 
 # Media
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
 lib/libOmxVdecHevc.so
 lib/libqomx_core.so
 lib64/libOmxVdecHevc.so
@@ -357,6 +354,15 @@ vendor/lib/libscve.so
 vendor/lib/libscve_mv.so
 -vendor/lib/libHevcSwDecoder.so
 vendor/lib64/libHevcSwDecoder.so
+
+# Media (Venus) Firmware
+etc/firmware/venus.b00
+etc/firmware/venus.b01
+etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
+etc/firmware/venus.mbn
+etc/firmware/venus.mdt
 
 # Post-processing
 vendor/lib64/libmm-disp-apis.so
