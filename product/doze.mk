@@ -1,3 +1,3 @@
 # Doze mode
-PRODUCT_PACKAGES += \
-    LenovoDoze
+#PRODUCT_PACKAGES += \
+#    LenovoDoze
