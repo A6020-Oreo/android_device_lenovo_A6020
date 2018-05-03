@@ -25,5 +25,5 @@ case "$board_id" in
 esac
 
 # Move variant-specific blobs
-mv /system/vendor/firmware/variant/$device/venus* /system/vendor/firmware/
-rm -rf /system/vendor/firmware/variant
+mv /system/etc/firmware/variant/$device/venus* /system/etc/firmware/
+rm -rf /system/etc/firmware/variant
