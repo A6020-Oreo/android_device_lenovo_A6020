@@ -66,17 +66,17 @@ vendor/lib64/libsc-a3xx.so
 vendor/lib64/libscale.so
 
 # Adreno (Graphics) Firmware
-vendor/firmware/a225_pfp.fw
-vendor/firmware/a225_pm4.fw
-vendor/firmware/a225p5_pm4.fw
-vendor/firmware/a300_pfp.fw
-vendor/firmware/a300_pm4.fw
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
 
 # Audio
 vendor/etc/sound_trigger_mixer_paths.xml
@@ -96,7 +96,6 @@ vendor/lib/libvoice-svc.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libswdap.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -111,34 +110,14 @@ vendor/lib64/libvoice-svc.so
 vendor/lib64/hw/wbc_hal.default.so
 
 # Audio Calibration Files
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_General_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Global_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Handset_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/msm8939-tapan-snd-card/MTP_WCD9306_Speaker_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_General_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Global_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/msm8939-snd-card-skul/QRD_SKUL_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/workspaceFile.qwsp
 
 # Bluetooth
 vendor/bin/btnvtool
@@ -263,10 +242,10 @@ vendor/lib/libmmcamera_wingtech_hi545_eeprom.so
 vendor/lib/libmmcamera_wingtech_ov13850_eeprom.so
 
 # Camera Firmware
-vendor/firmware/cpp_firmware_v1_1_1.fw
-vendor/firmware/cpp_firmware_v1_1_6.fw
-vendor/firmware/cpp_firmware_v1_2_0.fw
-vendor/firmware/cpp_firmware_v1_4_0.fw
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_4_0.fw
 
 # Camera Sensors
 vendor/lib/libmmcamera_hi545.so
@@ -373,13 +352,13 @@ vendor/lib/libscve_mv.so
 vendor/lib64/libHevcSwDecoder.so
 
 # Media (Venus) Firmware
-vendor/firmware/venus.b00
-vendor/firmware/venus.b01
-vendor/firmware/venus.b02
-vendor/firmware/venus.b03
-vendor/firmware/venus.b04
-vendor/firmware/venus.mbn
-vendor/firmware/venus.mdt
+etc/firmware/venus.b00
+etc/firmware/venus.b01
+etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
+etc/firmware/venus.mbn
+etc/firmware/venus.mdt
 
 # Post-processing
 vendor/bin/mm-pp-daemon
@@ -494,19 +473,19 @@ vendor/lib/libwfdcommonutils.so
 vendor/lib64/libwfdcommonutils.so
 
 # USB
-vendor/firmware/ice40.bin
+etc/firmware/ice40.bin
 
 # Widevine
-vendor/firmware/widevine.b00
-vendor/firmware/widevine.b01
-vendor/firmware/widevine.b02
-vendor/firmware/widevine.b03
-vendor/firmware/widevine.mdt
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.mdt
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # WLAN (Wi-Fi)
-vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
-vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 vendor/etc/wifi/WCNSS_qcom_cfg.ini
