@@ -15,7 +15,6 @@
 # limitations under the License.
 #
 
-
 # inherit from the proprietary version
 include vendor/lenovo/A6020/BoardConfigVendor.mk
 
@@ -28,5 +27,8 @@ TARGET_OTA_ASSERT_DEVICE := A6020,A6020a40,A6020a41,A6020a46,A6020l36,A6020l37,K
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG=true
+
+# Dependencies
+ALLOW_MISSING_DEPENDENCIES=true
 
 include $(LOCAL_PATH)/board/*.mk
