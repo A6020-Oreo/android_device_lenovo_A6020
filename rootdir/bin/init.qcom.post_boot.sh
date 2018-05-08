@@ -155,8 +155,12 @@ case "$target" in
             echo 3 > /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run
             echo 3 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run
             echo 3 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run
+	    
+	    # Set read_ahead value to 3MB
+            echo 3072 > /sys/block/mmcblk0/queue/read_ahead_kb
 
         else
+
             # Apply 3.0 specific Sched & Governor settings
             # HMP scheduler settings for 8939 V3.0
             echo 3 > /proc/sys/kernel/sched_window_stats_policy
@@ -262,6 +266,9 @@ case "$target" in
             echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
             echo 50000 > /proc/sys/kernel/sched_freq_inc_notify
             echo 50000 > /proc/sys/kernel/sched_freq_dec_notify
+	    
+	    # Set read_ahead value to 3MB
+            echo 3072 > /sys/block/mmcblk0/queue/read_ahead_kb
 
                 case "$revision" in
                      "3.0")
