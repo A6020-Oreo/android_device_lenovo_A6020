@@ -1,2 +1,5 @@
 # Qualcomm support
+BOARD_USES_ADRENO := true
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QTI_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
