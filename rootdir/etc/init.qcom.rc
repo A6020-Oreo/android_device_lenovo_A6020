@@ -485,7 +485,7 @@ on property:init.svc.surfaceflinger=restarting
 service vm_bms /system/vendor/bin/vm_bms
     class main
     user root
-    group root wakelock
+    group root wakelock system
 
 service charger /charger
     class charger
