@@ -265,6 +265,7 @@
         <item>30</item>
     </integer-array>
 
-
-
+    <!-- Get rid of button backlight option -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+    
 </resources>
